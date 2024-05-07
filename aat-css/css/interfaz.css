@@ -1,0 +1,122 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: Calibri;
+    font-size: 20px;
+}
+header img{
+    height: 100px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+#iconos{
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-size: 40px;
+}
+/*Menú de hamburguesa*/
+input:checked  ~ ul{
+    display:block;
+}
+input{
+    display: none;
+}
+nav{
+    margin-top: 10px;
+    background-color: rgb(155, 0, 0);
+}
+#cuerpo{
+    padding: 5%;
+}
+a img{
+    width: 40px;
+}
+footer{
+    color: white;
+    text-align: center;
+    background-color: rgb(155, 0, 0);
+}
+
+@media(min-width:800px){
+
+    label{
+        display: none;
+    }
+    .ul_menu{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .li_menu{
+        width: 10%;
+        float: left;
+    }
+    .li_menu a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .li_menu a:hover{
+        background-color: black;
+    }
+}
+
+@media(max-width:800px){
+    #iconos{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    nav{
+        text-align: right;
+    }
+    /*Menú Desplegable*/
+    .ul_menu{
+        display: none;
+    }
+    label{
+        box-sizing: border-box;
+        display: inline-block;
+        font-weight: bold;
+        user-select: none;
+    }
+    label:hover{
+        color: white;
+    }
+    /*Menu expandido*/
+    input:checked ~ label {
+        background: rgb(155, 0, 0); 
+    }
+    .ul_menu{
+        margin-top:0;
+        padding: 0;
+        width: 100%;
+    }
+    .li_menu{
+        display: block;
+        background: rgb(155, 0, 0);
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid white;
+    }
+    .li_menu a{
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+    /*Estilo cuando el mouse pasa encima de cada link del menu*/
+    .li_menu:hover {
+        filter: brightness(150%);
+    }
+}

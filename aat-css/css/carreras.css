@@ -1,0 +1,47 @@
+.sect-car{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+section article{
+    border: 1px solid darkblue;
+    display: flex;
+    width: 45%;
+}
+article div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+div p{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+div button{
+    width: 50%;
+    background-color: rgb(155, 0, 0);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+div button:hover{
+    background-color: rgb(199, 0, 0);
+}
+
+@media(max-width:800px){
+    .sect-car{
+        flex-direction: column;
+    }
+    section article{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+}
